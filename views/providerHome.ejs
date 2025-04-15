@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/providerHome/providerHome.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <h2>DoorToDoor</h2>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li><a href="/logout">LOGOUT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="left">
+      <div class="user">
+        <div class="info">
+          <h1><%= user.custname%></h1>
+          <p>Service: <%= user.service%></p>
+          <p>City: <%= user.city%></p>
+          <p>Experience: <%= user.experience%> year(s)</p>
+          <p>Specialties:</p>
+          <ul>
+            <li><%= user.speciality1 %></li>
+            <li><%= user.speciality2 %></li>
+          </ul>
+        </div>
+        <div class="image">
+          <% if(user.providerImage){ %>
+          <img src="/uploads/<%= user.providerImage%>" alt="providerImage" />
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="right">
+        <div class="content">
+          <div class="heading">
+            <h2>APPOINTMENTS</h2>
+          </div>
+          <div class="cards">
+            <% appointments.forEach((item) => { %>
+            <article class="card">
+              <div class="card-left">
+                <h3><%= item.userName%></h3>
+                <p><%= item.date%> | <%= item.time%></p>
+              </div>
+              <div class="card-right">
+                <p><%= item.address%></p>
+                <p><%= item.phone%></p>
+              </div>
+              <span><a href="/done/<%= item._id%>">Mark as done</a></span>
+            </article>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

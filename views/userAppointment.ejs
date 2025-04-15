@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/userAppointment/userAppointment.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <h2>DoorToDoor</h2>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li><a href="/"> HOME</a></li>
+          <li><a href="/services/Electrician">SERVICES</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="/user/appointments">APPOINTMENTS</a></li>
+          <li><a href="/logout">LOGOUT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main style="left: 0">
+      <div class="wrapper">
+        <h1>My Appointments</h1>
+        <% var i = 0 %>
+        <div class="cards">
+          <% result.forEach((item) => { %>
+          <article class="card">
+            <div class="card-left">
+              <div class="card-left-image">
+                <img
+                  src="/uploads/<%= providers[i].providerImage%>"
+                  alt="providerImage"
+                />
+              </div>
+              <div class="card-left-content">
+                <h3><%= providers[i].custname %></h3>
+                <p><%= providers[i].service %></p>
+                <p><%= item.date%> | <%= item.time%></p>
+              </div>
+            </div>
+            <div class="card-right">
+              <p><%= item.address%></p>
+              <p>+91 <%= providers[i].contact%></p>
+            </div>
+          </article>
+          <% i = i + 1%> <% }) %>
+        </div>
+      </div>
+    </main>
+
+    <!-- </div>
+      <div class="right">
+        <div class="content">
+          <div class="heading">
+            <h2>APPOINTMENTS</h2>
+          </div>
+          <% var i = 0 %>
+          <div class="cards">
+            <% result.forEach((item) => { %>
+            <article class="card">
+              <div class="card-left">
+                <h3><%= providers[i].custname %></h3>
+                <p><%= providers[i].service %></p>
+                <p><%= item.date%> | <%= item.time%></p>
+              </div>
+              <div class="card-right">
+                <p><%= item.address%></p>
+                <p><%= providers[i].contact%></p>
+              </div>
+            </article>
+            <% i = i + 1%> <% }) %>
+          </div>
+        </div>
+      </div>
+    </main> -->
+  </body>
+</html>

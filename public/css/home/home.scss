@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+$black: #353535;
+$blue: #284b63;
+$grey: #d9d9d9;
+$green: #3c6e71;
+
+nav {
+  display: flex;
+  padding: 1rem;
+  background: #353535;
+  opacity: 0.65;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 10vh;
+
+  .logo {
+    h2 {
+      color: white;
+    }
+  }
+
+  .links ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      padding: 5px 10px;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+.background-div {
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.cards {
+  position: absolute;
+  top: 40%;
+  width: 100vw;
+  padding: 7.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card {
+    height: 200px;
+    width: 260px;
+    padding: 5px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    background-color: $green;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      height: 150px;
+      margin-bottom: 10px;
+      //   mix-blend-mode: soft-light;
+      background-color: $green;
+      color: white;
+    }
+
+    .carpenter {
+      height: 500px;
+    }
+
+    h3 {
+      align-self: center;
+      mix-blend-mode: soft-light;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+form {
+  input {
+    height: 50px;
+    padding: 5px 10px;
+    width: 350px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+  }
+
+  button {
+    height: 50px;
+    width: 85px;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+  }
+}
+
+#about {
+  margin-top: 63vh;
+  width: 100vw;
+
+  .about-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    .left {
+      width: 40%;
+      height: 400px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding-right: 45px;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: $black;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-right: 40px;
+      }
+
+      button {
+        width: 180px;
+        height: 50px;
+        border: none;
+        background-color: $black;
+        border-radius: 10px;
+        margin-top: 40px;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 1.2rem;
+          letter-spacing: 0.35px;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  width: 100%;
+  height: 345px;
+  box-sizing: border-box;
+  padding: 20px;
+  color: white;
+  margin-top: 55px;
+  background-color: #353535;
+  overflow: hidden;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.75rem;
+}
+.footer-box {
+  padding: 15px;
+}
+.footer-box h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+#footer-box1 p {
+  font-size: 1.2rem;
+}
+#footer-box2 ul {
+  margin: 0 auto;
+}
+#footer-box2 ul li {
+  font-size: 1rem;
+
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 5px 10px;
+}
+#footer-box2 ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+#footer-box3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#footer-box3 input {
+  padding: 10px 10px;
+  margin: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.1rem;
+  outline: none;
+}
+#footer-box3 textarea {
+  padding: 10px 10px;
+  margin: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.1rem;
+  outline: none;
+}
+#footer-box3 button {
+  display: block;
+  margin: 10px auto 10px;
+  padding: 5px 7px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+  outline: none;
+  cursor: pointer;
+}

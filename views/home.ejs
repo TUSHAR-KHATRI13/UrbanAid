@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home/home.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <h2>DoorToDoor</h2>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li><a href=""> HOME</a></li>
+          <li><a href="/services/Electrician">SERVICES</a></li>
+          <li><a href="">ABOUT</a></li>
+          <% if(loggedIn){ %>
+          <li><a href="/user/appointments">APPOINTMENTS</a></li>
+          <li><a href="/logout">LOGOUT</a></li>
+          <% }else{ %>
+          <li><a href="/login">LOGIN</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="background-div">
+      <img src="/images/home-bg.jpg" />
+      <form action="/" method="POST">
+        <input type="text" name="city" placeholder="Enter City" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="/images/electrician.svg" />
+        <h3>Electrician</h3>
+      </div>
+      <div class="card">
+        <img src="/images/plumber.svg" />
+        <h3>Plumber</h3>
+      </div>
+      <div class="card">
+        <img src="/images/salon.svg" />
+        <h3>Salon</h3>
+      </div>
+      <div class="card">
+        <img src="/images/carpenter3.svg" />
+        <h3>Carpenter</h3>
+      </div>
+      <div class="card">
+        <img src="/images/pesticide.svg" />
+        <h3>Pest Control</h3>
+      </div>
+      <div class="card">
+        <img src="/images/painter.svg" />
+        <h3>Painter</h3>
+      </div>
+      <div class="card">
+        <img src="/images/repair.svg" />
+        <h3>Repair</h3>
+      </div>
+      <div class="card">
+        <img src="/images/janitor.svg" />
+        <h3>Cleaning</h3>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="about-wrapper">
+        <div class="left">
+          <img src="/images/home.png" alt="home" />
+        </div>
+        <div class="right">
+          <h1>Your Search Ends Here!</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+            doloribus quisquam velit voluptates numquam enim culpa, repudiandae
+            eos! Cupiditate molestias dicta alias corrupti consectetur, autem
+            qui quia?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Enim quaerat architecto dignissimos
+          </p>
+          <button><a href="/register">Get Started</a></button>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="footer-container">
+        <div class="footer-box" id="footer-box1">
+          <h3>Address</h3>
+          <p>433 , Amed Chambers, Lamington Rd, Girgaon</p>
+          <p>Mumbai</p>
+          <p>Maharashtra</p>
+          <p>400004</p>
+          <p>02223881200</p>
+        </div>
+        <div class="footer-box" id="footer-box2">
+          <h3>Quick Links</h3>
+          <ul id="footer-link">
+            <li class="footer-links">
+              <a href="/services/Electrician">Electricians</a>
+            </li>
+            <li class="footer-links">
+              <a href="/services/Plumber">Plumbers</a>
+            </li>
+            <li class="footer-links">
+              <a href="/services/Carpenter">Carpenters</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-box" id="footer-box3">
+          <h3>Contact Us</h3>
+          <input type="email" name="footer-email" placeholder="Your email" />
+          <textarea
+            rows="4"
+            cols="10"
+            name="footer-text"
+            placeholder="Enter your message"
+          ></textarea>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

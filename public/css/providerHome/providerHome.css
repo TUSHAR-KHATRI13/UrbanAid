@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  background: #353535;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 10vh;
+}
+
+nav .logo h2 {
+  color: white;
+}
+
+nav .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav .links ul li {
+  padding: 5px 10px;
+}
+
+nav .links ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.left {
+  width: 60vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #3c6e71;
+}
+
+.left .user {
+  margin-top: 20vh;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.left .user .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.left .user .info h1 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 4.2rem;
+  letter-spacing: 2px;
+}
+
+.left .user .info p {
+  margin-bottom: 8px;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.left .user .info ul {
+  margin-left: 30px;
+}
+
+.left .user .info ul li {
+  margin-bottom: 8px;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.left .image {
+  margin-top: 20px;
+  width: 200px;
+  height: 300px;
+  margin-right: 14%;
+}
+
+.left .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+main .right {
+  width: 100%;
+  height: 100%;
+  background-color: #284b63;
+}
+
+main .right .content {
+  margin-top: 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .right .content .heading {
+  margin-top: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .right .content .heading h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+main .right .content .cards {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .right .content .cards .card {
+  position: relative;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  height: 100px;
+  background-color: whitesmoke;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+main .right .content .cards .card .card-left {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .right .content .cards .card .card-right {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .right .content .cards span {
+  position: absolute;
+  bottom: 8px;
+  right: 20px;
+}
+
+main .right .content .cards span a {
+  text-decoration: none;
+  color: coral;
+  font-weight: 700;
+}
+/*# sourceMappingURL=providerHome.css.map */

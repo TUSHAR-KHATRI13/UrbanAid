@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/register/register.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <h2>DoorToDoor</h2>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li><a href="/"> HOME</a></li>
+          <li><a href="/services/Electrician">SERVICES</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="/login">LOGIN</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper">
+      <form
+        action="/register"
+        method="POST"
+        id="regForm"
+        enctype="multipart/form-data"
+      >
+        <div class="form-content">
+          <div class="form-left">
+            <div class="form-control">
+              <label for="custname">Name:</label>
+              <input
+                type="text"
+                name="custname"
+                id="custname"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="username">Username:</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="password">Password:</label>
+              <input type="password" name="password" id="password" />
+            </div>
+
+            <div class="form-control">
+              <label for="contact">Contact:</label>
+              <input
+                type="text"
+                name="contact"
+                id="contact"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-control">
+              <div class="type">
+                <input
+                  type="radio"
+                  id="customer"
+                  name="type"
+                  value="customer"
+                  class="typeInput"
+                  onclick="show(0)"
+                />
+                <label for="customer">Register as Customer</label><br />
+              </div>
+              <div class="type">
+                <input
+                  type="radio"
+                  id="provider"
+                  name="type"
+                  value="provider"
+                  class="typeInput"
+                  onclick="show(1)"
+                />
+                <label for="provider">Register as Service Provider</label><br />
+              </div>
+            </div>
+          </div>
+
+          <div class="providerInput" id="providerInput">
+            <div class="form-control">
+              <label for="service">Service:</label>
+              <select name="service" id="service" class="select">
+                <option value="Electrician">Electrician</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Carpenter">Carpenter</option>
+                <option value="Salon">Salon</option>
+                <option value="Pest Control">Pest Control</option>
+                <option value="Repair">Repair</option>
+                <option value="Cleaning">Cleaning</option>
+              </select>
+            </div>
+
+            <div class="form-control">
+              <label for="city">City:</label>
+              <input type="text" name="city" id="city" autocomplete="off" />
+            </div>
+
+            <div class="form-control">
+              <label for="experience">Experience (In years):</label>
+              <input
+                type="text"
+                name="experience"
+                id="experience"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="speciality">Work you specialize in (max 2):</label>
+              <input
+                type="text"
+                name="speciality"
+                id="speciality"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="providerImage">Upload photo:</label>
+              <input
+                type="file"
+                name="providerImage"
+                id="providerImage"
+                accept="image/*"
+                class="photo"
+              />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="side-image">
+        <img src="/images/reg-side.jpg" />
+      </div>
+    </div>
+
+    <script>
+      function show(value) {
+        if (value == 1) {
+          document.getElementById("providerInput").style.display = "block";
+          //   document.getElementById("regForm").action = "/home/provider";
+        } else {
+          document.getElementById("providerInput").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

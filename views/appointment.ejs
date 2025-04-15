@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/register/register.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <h2>DoorToDoor</h2>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li><a href="/"> HOME</a></li>
+          <li><a href="/services/Electrician">SERVICES</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="/user/appointments">APPOINTMENTS</a></li>
+          <li><a href="/login">LOGOUT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <form
+        action="/appointment/<%= providerId%>"
+        class="login-form"
+        method="POST"
+        style="margin-left: 80px"
+      >
+        <div class="form-control">
+          <label for="providerName">Provider Name:</label>
+          <input
+            type="text"
+            name="providerName"
+            id="providerName"
+            value="<%=
+            providerName%>"
+            readonly
+          />
+        </div>
+
+        <!-- <div class="form-control">
+          <label for="providerId">Provider Id:</label>
+          <input
+            type="text"
+            name="providerId"
+            id="providerId"
+            value="<%=
+          providerId%>"
+            readonly
+          />
+        </div> -->
+
+        <!-- <div class="form-control">
+          <label for="name">Name:</label>
+          <input type="text" name="userName" id="name" />
+        </div> -->
+
+        <div class="form-control">
+          <label for="date">Date</label>
+          <input
+            type="text"
+            name="date"
+            id="date"
+            placeholder="Month date"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-control">
+          <label for="time">Time:</label>
+          <input type="time" name="time" id="time" />
+        </div>
+
+        <div class="form-control">
+          <label for="address">Address:</label>
+          <textarea name="address" rows="6" cols="35" id="address"></textarea>
+        </div>
+
+        <!-- <div class="form-control">
+          <label for="phone">Phone:</label>
+          <input type="text" name="phone" id="phone" />
+        </div> -->
+
+        <button type="submit">Book</button>
+      </form>
+
+      <div class="side-image-l">
+        <img src="/images/appointment.jpg" />
+      </div>
+    </div>
+  </body>
+</html>

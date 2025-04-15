@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="/css/services/services.css" />
+  </head>
+  <body>
+    <navbar>
+      <h2>DoorToDoor</h2>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/services/Electrician">SERVICES</a></li>
+        <li><a href="">ABOUT</a></li>
+        <LI><a href="/user/appointments">APPOINTMENTS</a></LI>
+        <li><a href="/logout">LOGOUT</a></li>
+      </ul>
+    </navbar>
+
+    <div class="links">
+      <ul>
+        <% if(profession === 'Electrician'){ %>
+          <li class="current-l"><a href="/services/Electrician" style="color:black">Electrician</a></li>
+          <% }else{ %>
+        <li><a href="/services/Electrician">Electrician</a></li>
+        <% } %>
+        <% if(profession === 'Plumber'){ %>
+          <li class="current-l"><a href="/services/Plumber" style="color:black">Plumber</a></li>
+          <% }else{ %>
+        <li><a href="/services/Plumber">Plumber</a></li>
+        <% } %>
+        <% if(profession === 'Salon'){ %>
+          <li class="current-l"><a href="/services/Salon" style="color:black">Salon</a></li>
+          <% }else{ %>
+        <li><a href="/services/Salon">Salon</a></li>
+        <% } %>
+        <% if(profession === 'Carpenter'){ %>
+          <li class="current-l"><a href="/services/Carpenter" style="color:black">Carpenter</a></li>
+          <% }else{ %>
+        <li><a href="/services/Carpenter">Carpenter</a></li>
+        <% } %>
+        <% if(profession === 'Pestcontrol'){ %>
+          <li class="current-l"><a href="/services/Pestcontrol" style="color:black">Pest Control</a></li>
+          <% }else{ %>
+        <li><a href="/services/Pestcontrol">Pest Control</a></li>
+        <% } %>
+        <% if(profession === 'Painting'){ %>
+          <li class="current-l"><a href="/services/Painting" style="color:black">Painting</a></li>
+          <% }else{ %>
+        <li><a href="/services/Painting">Painting</a></li>
+        <% } %>
+        <% if(profession === 'Repair'){ %>
+          <li class="current-l"><a href="/services/Repair" style="color:black">Repair</a></li>
+          <% }else{ %>
+        <li><a href="/services/Repair">Repair</a></li>
+        <% } %>
+        <% if(profession === 'Cleaning'){ %>
+          <li class="current-l"><a href="/services/Cleaning" style="color:black">Cleaning</a></li>
+          <% }else{ %>
+        <li><a href="/services/Cleaning">Cleaning</a></li>
+        <% } %>
+        >
+      </ul>
+    </div>
+    <section class="display" id="electricians">
+      
+      <div class="heading">
+        <% if(city === "1"){ %>
+        <h2><%= profession %>s</h2>
+        <% }else{ %>
+          <h2><%= profession %>s in <%= city%></h2>
+          <% } %>
+        
+        <!-- <input
+          type="text"
+          name="pincode"
+          id="pincode"
+          placeholder="Enter Pincode"
+        /> -->
+        <a href="/">Search by City</a>
+      </div>
+    
+       <div class="results">
+        <div class="heading"></div>
+        <div class="cards">
+          <% services.forEach(function(service){ %>
+          <article class="card">
+            <div class="image">
+              <% if(service.providerImage){ %>
+                <img src="/uploads/<%= service.providerImage%>" alt="providerImage" />
+              <% } %>
+            </div>
+            <div class="content">
+              <div class="info">
+                <h2><%= service.custname %></h2>
+                <p class="city"><%= service.city %></p>
+                <p><img src="/images/star.png" alt="a bright star"><span>4.8</span> </p>
+                <p>Experience:- <%= service.experience %> years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p><%= service.speciality1 %></p>
+                <p><%= service.speciality2 %></p>
+                <button><a href="/appointment/<%= service._id%>">Book Appointment</a></button>
+              </div>
+            </div>
+          </article>
+
+          <% }) %>
+
+          <!-- <article class="card">
+            <div class="image"></div>
+            <div class="content">
+              <div class="info">
+                <h2>Akash Khatri</h2>
+                <p>Mumbai, Maharashtra</p>
+                <p>4.8</p>
+                <p>Experience:- 2years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p>Pipe fitting</p>
+                <p>Water Leakage</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="image"></div>
+            <div class="content">
+              <div class="info">
+                <h2>Akash Khatri</h2>
+                <p>Mumbai, Maharashtra</p>
+                <p>4.8</p>
+                <p>Experience:- 2years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p>Pipe fitting</p>
+                <p>Water Leakage</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="display" id="plumbers">
+      <div class="heading">
+        <h2>Plumbers</h2>
+        <input
+          type="text"
+          name="pincode"
+          id="pincode"
+          placeholder="Enter Pincode"
+        />
+      </div>
+      <div class="results">
+        <div class="heading"></div>
+        <div class="cards">
+          <article class="card">
+            <div class="image"></div>
+            <div class="content">
+              <div class="info">
+                <h2>Akash Khatri</h2>
+                <p>Mumbai, Maharashtra</p>
+                <p>4.8</p>
+                <p>Experience:- 2years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p>Pipe fitting</p>
+                <p>Water Leakage</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="image"></div>
+            <div class="content">
+              <div class="info">
+                <h2>Akash Khatri</h2>
+                <p>Mumbai, Maharashtra</p>
+                <p>4.8</p>
+                <p>Experience:- 2years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p>Pipe fitting</p>
+                <p>Water Leakage</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="image"></div>
+            <div class="content">
+              <div class="info">
+                <h2>Akash Khatri</h2>
+                <p>Mumbai, Maharashtra</p>
+                <p>4.8</p>
+                <p>Experience:- 2years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p>Pipe fitting</p>
+                <p>Water Leakage</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="display" id="carpenters">
+      <div class="heading">
+        <h2>Carpenter</h2>
+        <input
+          type="text"
+          name="pincode"
+          id="pincode"
+          placeholder="Enter Pincode"
+        />
+      </div>
+      <div class="results">
+        <div class="heading"></div>
+        <div class="cards">
+          <article class="card">
+            <div class="image"></div>
+            <div class="content">
+              <div class="info">
+                <h2>Akash Khatri</h2>
+                <p>Mumbai, Maharashtra</p>
+                <p>4.8</p>
+                <p>Experience:- 2years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p>Pipe fitting</p>
+                <p>Water Leakage</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="image"></div>
+            <div class="content">
+              <div class="info">
+                <h2>Akash Khatri</h2>
+                <p>Mumbai, Maharashtra</p>
+                <p>4.8</p>
+                <p>Experience:- 2years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p>Pipe fitting</p>
+                <p>Water Leakage</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="image"></div>
+            <div class="content">
+              <div class="info">
+                <h2>Akash Khatri</h2>
+                <p>Mumbai, Maharashtra</p>
+                <p>4.8</p>
+                <p>Experience:- 2years</p>
+              </div>
+              <div class="speciality">
+                <h3>Specializes in:-</h3>
+                <p>Pipe fitting</p>
+                <p>Water Leakage</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div> -->
+    </section>
+  </body>
+</html>

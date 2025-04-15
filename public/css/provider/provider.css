@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper form {
+  width: 500px;
+  padding: 20px;
+  background-color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper form .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px;
+}
+
+.wrapper form .form-control label {
+  font-size: 1rem;
+  padding-bottom: 5px;
+}
+
+.wrapper form .form-control input {
+  width: 350px;
+  padding: 8px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 7px;
+}
+
+.wrapper button {
+  width: 100px;
+  padding: 7px 10px;
+  margin-top: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wrapper button a {
+  text-decoration: none;
+  color: black;
+}
+/*# sourceMappingURL=provider.css.map */

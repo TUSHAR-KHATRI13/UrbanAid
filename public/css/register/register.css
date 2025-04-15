@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  background: #353535;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 10vh;
+}
+
+nav .logo h2 {
+  color: white;
+}
+
+nav .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav .links ul li {
+  padding: 5px 10px;
+}
+
+nav .links ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.wrapper {
+  width: 98vw;
+  height: 95vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 60px;
+  padding-left: 70px;
+}
+
+.wrapper form {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 8px;
+  background-color: #d8d8d8;
+  z-index: 10;
+  position: relative;
+  padding-right: 0;
+}
+
+.wrapper form .form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper form .form-left {
+  width: 400px;
+}
+
+.wrapper form .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.wrapper form .form-control label {
+  margin-bottom: 3px;
+  font-size: 1.12rem;
+  color: black;
+}
+
+.wrapper form .form-control input {
+  width: 350px;
+  padding: 2px;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  background-color: #d8d8d8;
+}
+
+.wrapper form .form-control textarea {
+  outline: none;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.wrapper form .form-control .typeInput {
+  width: 20px;
+  margin-top: 10px;
+}
+
+.wrapper form .form-control .select {
+  width: 350px;
+  padding: 3px;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  background-color: #d8d8d8;
+}
+
+.wrapper form .form-control .select option {
+  padding: 2px;
+}
+
+.wrapper form button {
+  width: 120px;
+  padding: 7px 10px;
+  margin-top: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: none;
+  background-color: #353535;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-left: -30px;
+}
+
+.wrapper form button a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper form .providerInput {
+  width: 400px;
+  display: none;
+}
+
+.wrapper form .providerInput .form-control .photo {
+  border: none;
+}
+
+.wrapper form span {
+  margin-top: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.wrapper form span a {
+  text-decoration: none;
+  color: coral;
+  font-weight: 700;
+}
+
+.wrapper .side-image {
+  width: 500px;
+  height: 700px;
+  margin-right: 80px;
+}
+
+.wrapper .side-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrapper .side-image-l {
+  width: 700px;
+  margin-right: 80px;
+}
+
+.wrapper .side-image-l img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrapper .login-form {
+  padding-right: 30px;
+  margin-left: 30px;
+}
+/*# sourceMappingURL=register.css.map */
